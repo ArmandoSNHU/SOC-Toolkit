@@ -1,0 +1,8 @@
+Analyst: Armando Gomez
+Incident Title: Suspicious SSH Attempt
+Date: 2025-04-06 17:32:00
+Affected System: ubuntu-dev-01
+Attack Vector: Brute force login
+Indicators of Compromise: 192.168.1.88
+Summary: Multiple failed login attempts followed by privilege escalation.
+Remediation Steps: IP blocked, password reset, sudo access reviewed.
