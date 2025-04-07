@@ -1,79 +1,79 @@
 # 🛡️ SOC Toolkit
 
 A collection of hands-on tools built by Armando Gomez to simulate workflows performed by Security Operations Center (SOC) analysts.  
-Each tool focuses on real-world detection, response, and documentation techniques — built entirely in Python and easy to run from the command line.
+Each tool focuses on real-world detection, response, and documentation techniques — all built in Python and accessible via a single CLI dashboard.
 
 ---
 
-## 🚀 Included Tools
+## 🚀 Run the Toolkit
 
-### 🔍 [Log Watcher](./Log-Watcher)
-Real-time log monitoring tool that detects suspicious activity by scanning for defined keywords.
+Use the main dashboard to launch any tool from a menu:
 
-- Monitors a live log file (e.g. `example.log`)
-- Triggers alerts on things like `Failed password`, `sudo`, `unauthorized`
-- Alerts are written to a terminal and `alerts.log`
+```bash
+python main.py
+```
 
----
+This will show:
 
-### 🗂️ [Event Timeline Generator](./Event-Timeline-Generator)
-Parses log files and builds timestamped incident timelines — useful for investigations and IR documentation.
+```
+=== 🛡️ SOC TOOLKIT MAIN MENU ===
 
-- Scans logs for login attempts, sudo usage, and more
-- Generates a timeline in `timeline.txt`
-- Helps reconstruct event flow for IR reports
-
----
-
-### 📝 [Incident Report Generator](./Incident-Report-Generator)
-Creates a structured incident report from SOC analyst prompts.
-
-- Input: Title, affected system, attack vector, IOCs, response steps
-- Output: A clean `.txt` report with all details
-- Helps SOC analysts document incidents fast and consistently
+1. Log Watcher
+2. Event Timeline Generator
+3. Incident Report Generator
+4. SOC Playbook Generator
+5. Threat Rule Engine
+6. IOC Lookup Tool
+7. PDF Report Exporter
+0. Exit
+```
 
 ---
 
-### 📋 [SOC Playbook Generator](./SOC-Playbooks)
-Builds Markdown-based response playbooks for phishing, malware, and data exfiltration incidents.
+## 🧰 Included Tools
 
-- CLI tool with pre-built response steps for each incident type
-- Saves results as `*.md` files
-- Ideal for documenting IR procedures
+### 1️⃣ Log Watcher
+Real-time keyword-based log monitor  
+📁 [`Log-Watcher`](./Log-Watcher)
+
+### 2️⃣ Event Timeline Generator
+Parses logs into timestamped IR timelines  
+📁 [`Event-Timeline-Generator`](./Event-Timeline-Generator)
+
+### 3️⃣ Incident Report Generator
+Prompt-based CLI tool to document incidents  
+📁 [`Incident-Report-Generator`](./Incident-Report-Generator)
+
+### 4️⃣ SOC Playbook Generator
+Builds Markdown playbooks for Phishing, Malware, etc.  
+📁 [`SOC-Playbooks`](./SOC-Playbooks)
+
+### 5️⃣ Threat Rule Engine
+Scans logs for matches to detection rules with severity  
+📁 [`Threat-Rule-Engine`](./Threat-Rule-Engine)
+
+### 6️⃣ IOC Lookup Tool
+Flags IOCs using a local threat intel list  
+📁 [`IOC-Lookup`](./IOC-Lookup)
+
+### 7️⃣ PDF Report Exporter
+Converts `.txt` reports into printable `.pdf` files  
+📁 [`PDF-Report-Exporter`](./PDF-Report-Exporter)
 
 ---
 
-### ⚠️ [Threat Rule Engine](./Threat-Rule-Engine)
-A rule-based alert system that scans logs and flags events based on severity.
+## 🧠 Why This Exists
 
-- Keywords are mapped to severity levels: Info / Medium / High
-- Scans `sample.log` for known patterns
-- Simulates lightweight SIEM detection logic
-
----
-
-## 🎯 Why This Exists
-
-This toolkit is designed to:
-- Practice key SOC workflows using Python
-- Document skills for SOC, IR, and cybersecurity job applications
-- Show real-world understanding of logs, alerts, playbooks, and threat detection
-
----
-
-## 🧰 Tech Stack
-
-- Python 3.x
-- Basic file I/O and CLI-based tools
-- Markdown for playbooks and reporting
+This toolkit was built to:
+- Simulate the day-to-day work of SOC analysts
+- Help learn detection engineering concepts
+- Demonstrate real-world technical workflows in cybersecurity
 
 ---
 
 ## 👨‍💻 Author
 
 **Armando Gomez**  
-GitHub: [ArmandoSNHU](https://github.com/ArmandoSNHU)  
-Built with ❤️ as a learning and portfolio project
+GitHub: [ArmandoSNHU](https://github.com/ArmandoSNHU)
 
 ---
-
