@@ -1,0 +1,26 @@
+=== INCIDENT REPORT ===
+
+Analyst Name:
+Armando Gomez
+
+Incident Title:
+title 5 -78
+
+Date/Time of Detection:
+shell failed
+
+Affected System:
+main os
+
+Attack Vector:
+phishing
+
+Indicators of Compromise:
+mainip.000.101
+
+Summary:
+clerk opened scam email and system affect (mock report)
+
+Remediation Steps:
+quarantine item
+
