@@ -13,9 +13,11 @@ def generate_pdf_from_txt(txt_file):
     pdf.ln(10)
 
     pdf.set_font("Arial", size=12)
-    with open(txt_file, "r") as f:
+    with open(txt_file, "r", encoding="utf-8") as f:
         for line in f:
-            pdf.multi_cell(0, 10, line.strip())
+            clean_line = line.encode("ascii", "ignore").decode("ascii")
+            pdf.multi_cell(0, 10, clean_line.strip())
+
 
     filename = f"incident_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
     pdf.output(filename)
