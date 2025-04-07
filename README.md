@@ -1,79 +1,79 @@
 # 🛡️ SOC Toolkit
 
-A collection of hands-on tools built to simulate key workflows and tasks performed by SOC (Security Operations Center) analysts. This repo is designed to demonstrate real-world detection, monitoring, and incident response skills.
+A collection of hands-on tools built by Armando Gomez to simulate workflows performed by Security Operations Center (SOC) analysts.  
+Each tool focuses on real-world detection, response, and documentation techniques — built entirely in Python and easy to run from the command line.
 
 ---
 
-## 📦 Tools Included
+## 🚀 Included Tools
 
-### 🔍 Log Watcher
-Monitors a log file in real time for suspicious keywords like `Failed password`, `sudo`, or `unauthorized`.  
-📁 `Log-Watcher/`
+### 🔍 [Log Watcher](./Log-Watcher)
+Real-time log monitoring tool that detects suspicious activity by scanning for defined keywords.
 
-**Features:**
-- Watches `example.log` for activity
-- Triggers alerts in terminal
-- Logs alerts to `alerts.log`
+- Monitors a live log file (e.g. `example.log`)
+- Triggers alerts on things like `Failed password`, `sudo`, `unauthorized`
+- Alerts are written to a terminal and `alerts.log`
 
 ---
 
-### 🗂️ Event Timeline Generator
-Parses a log file and builds a timestamped incident timeline for investigation purposes.  
-📁 `Event-Timeline-Generator/`
+### 🗂️ [Event Timeline Generator](./Event-Timeline-Generator)
+Parses log files and builds timestamped incident timelines — useful for investigations and IR documentation.
 
-**Features:**
-- Scans `sample.log` for login attempts and sudo usage
-- Writes a structured timeline to `timeline.txt`
-- Easy to expand with new patterns
+- Scans logs for login attempts, sudo usage, and more
+- Generates a timeline in `timeline.txt`
+- Helps reconstruct event flow for IR reports
 
 ---
 
-## 🎯 Why This Repo Exists
+### 📝 [Incident Report Generator](./Incident-Report-Generator)
+Creates a structured incident report from SOC analyst prompts.
 
-Built to showcase real-world SOC skills for detection engineering and Tier 1–2 security analyst roles. These tools simulate the kind of day-to-day tasks involved in:
-- Monitoring endpoint/system logs
-- Creating detection rules
-- Investigating alerts
-- Building incident reports
-
----
-
-## 🚀 How to Use
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/ArmandoSNHU/SOC-Toolkit.git
-   cd SOC-Toolkit
-   ```
-
-2. Navigate into any tool directory and follow the included instructions:
-   ```bash
-   cd Log-Watcher
-   python3 log_watcher.py
-   ```
+- Input: Title, affected system, attack vector, IOCs, response steps
+- Output: A clean `.txt` report with all details
+- Helps SOC analysts document incidents fast and consistently
 
 ---
 
-## 📌 Coming Soon
+### 📋 [SOC Playbook Generator](./SOC-Playbooks)
+Builds Markdown-based response playbooks for phishing, malware, and data exfiltration incidents.
 
-- ✅ Threat Rule Engine (SIEM-style pattern matching)
-- ✅ Incident Report Generator
-- ✅ Realistic log datasets for analysis
-- ✅ Windows Event Log parsing
+- CLI tool with pre-built response steps for each incident type
+- Saves results as `*.md` files
+- Ideal for documenting IR procedures
 
 ---
 
-## 🔐 Built With
+### ⚠️ [Threat Rule Engine](./Threat-Rule-Engine)
+A rule-based alert system that scans logs and flags events based on severity.
+
+- Keywords are mapped to severity levels: Info / Medium / High
+- Scans `sample.log` for known patterns
+- Simulates lightweight SIEM detection logic
+
+---
+
+## 🎯 Why This Exists
+
+This toolkit is designed to:
+- Practice key SOC workflows using Python
+- Document skills for SOC, IR, and cybersecurity job applications
+- Show real-world understanding of logs, alerts, playbooks, and threat detection
+
+---
+
+## 🧰 Tech Stack
 
 - Python 3.x
-- VS Code
-- Logs inspired by `/var/log/auth.log` and SSHD output
+- Basic file I/O and CLI-based tools
+- Markdown for playbooks and reporting
 
 ---
 
-## 🙋‍♂️ Author
+## 👨‍💻 Author
 
-Made by **Armando Gomez**  
-📍 GitHub: [ArmandoSNHU](https://github.com/ArmandoSNHU)
+**Armando Gomez**  
+GitHub: [ArmandoSNHU](https://github.com/ArmandoSNHU)  
+Built with ❤️ as a learning and portfolio project
 
 ---
+
