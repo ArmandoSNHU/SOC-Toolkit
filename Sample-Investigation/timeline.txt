@@ -1,0 +1,4 @@
+Apr 06 12:01:45 — Failed Login Attempt — Apr 06 12:01:45 ubuntu sshd[12345]: Failed password for invalid user admin from 192.168.0.22 port 22
+Apr 06 12:02:02 — Successful Login — Apr 06 12:02:02 ubuntu sshd[12345]: Accepted password for root from 192.168.0.22 port 22
+Apr 06 12:03:17 — Privilege Escalation Attempt — Apr 06 12:03:17 ubuntu sudo:   user : TTY=pts/0 ; PWD=/home/user ; USER=root ; COMMAND=/bin/ls
+Apr 06 03:41:01 — Failed Login Attempt — Apr 06 03:41:01 ubuntu sshd[22222]: Failed password for invalid user test from 192.168.0.99 port 22
