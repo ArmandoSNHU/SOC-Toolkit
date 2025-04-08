@@ -8,7 +8,8 @@ TOOLS = {
     "4": ("SOC Playbook Generator", "SOC-Playbooks/playbook_generator.py"),
     "5": ("Threat Rule Engine", "Threat-Rule-Engine/rule_engine.py"),
     "6": ("IOC Lookup Tool", "IOC-Lookup/ioc_lookup.py"),
-    "7": ("PDF Report Exporter", "PDF-Report-Exporter/pdf_exporter.py")
+    "7": ("PDF Report Exporter", "PDF-Report-Exporter/pdf_exporter.py"),
+    "8": ("Sample Investigation Case Viewer", "Sample-Investigation/README.md")
 }
 
 def clear():
