@@ -1,3 +1,6 @@
-malicious-domain.com
-badfile.exe
-10.0.0.5
+192.168.1.1 — Abuse Score: 0 | Country: None | ISP: None
+10.0.0.5 — MATCHED in threat feed
+10.0.0.5 — Abuse Score: 0 | Country: None | ISP: Private IP Address LAN
+malicious-domain.com — MATCHED in threat feed
+badfile.exe — MATCHED in threat feed
+8.8.8.8 — Abuse Score: 0 | Country: US | ISP: Google LLC
