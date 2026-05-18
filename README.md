@@ -1,79 +1,101 @@
-# 🛡️ SOC Toolkit
+# SOC Toolkit
 
-A collection of hands-on tools built by Armando Gomez to simulate workflows performed by Security Operations Center (SOC) analysts.  
-Each tool focuses on real-world detection, response, and documentation techniques — all built in Python and accessible via a single CLI dashboard.
+[![Python](https://img.shields.io/badge/Python-3.x-blue)](https://www.python.org/)
+[![Use Case](https://img.shields.io/badge/Use%20Case-SOC%20Training-7c3aed)](#included-tools)
+[![Data](https://img.shields.io/badge/Data-Sample%20Logs-informational)](#safety-notes)
 
----
+SOC Toolkit is a collection of Python command-line utilities that model common Security Operations Center workflows: log monitoring, incident timeline building, IOC matching, detection rule testing, incident reporting, playbook generation, and PDF export.
 
-## 🚀 Run the Toolkit
+The project is intended for training, portfolio demonstration, and local lab use. It uses sample logs and local text files, not production telemetry.
 
-Use the main dashboard to launch any tool from a menu:
+## Included Tools
 
-```bash
+| Tool | Purpose | Folder |
+| --- | --- | --- |
+| Log Watcher | Monitors a log file for suspicious keywords and writes alerts | `Log-Watcher/` |
+| Event Timeline Generator | Converts log entries into a timeline for incident review | `Event-Timeline-Generator/` |
+| Incident Report Generator | Produces structured incident reports from analyst prompts | `Incident-Report-Generator/` |
+| SOC Playbook Generator | Creates Markdown playbooks for common incident types | `SOC-Playbooks/` |
+| Threat Rule Engine | Matches logs against local detection rules and severity labels | `Threat-Rule-Engine/` |
+| IOC Lookup Tool | Compares submitted indicators against a local threat intel list | `IOC-Lookup/` |
+| PDF Report Exporter | Converts text incident reports into PDF artifacts | `PDF-Report-Exporter/` |
+| SIEM Log Feeder | Generates sample log events for SIEM-style testing | `SIEM-Log-Feeder/` |
+
+## Quick Start
+
+Run the menu dashboard from the repository root:
+
+```powershell
 python main.py
 ```
 
-This will show:
+The dashboard provides numbered access to the individual tools.
 
-```
-=== 🛡️ SOC TOOLKIT MAIN MENU ===
+## Example Workflows
 
-1. Log Watcher
-2. Event Timeline Generator
-3. Incident Report Generator
-4. SOC Playbook Generator
-5. Threat Rule Engine
-6. IOC Lookup Tool
-7. PDF Report Exporter
-0. Exit
+### Investigate A Sample Authentication Event
+
+```powershell
+python Event-Timeline-Generator\timeline_generator.py
+python Threat-Rule-Engine\rule_engine.py
+python Incident-Report-Generator\incident_report_generator.py
 ```
 
----
+### Check Indicators Against Local Threat Intelligence
 
-## 🧰 Included Tools
+```powershell
+python IOC-Lookup\ioc_lookup.py
+```
 
-### 1️⃣ Log Watcher
-Real-time keyword-based log monitor  
-📁 [`Log-Watcher`](./Log-Watcher)
+### Generate A Playbook
 
-### 2️⃣ Event Timeline Generator
-Parses logs into timestamped IR timelines  
-📁 [`Event-Timeline-Generator`](./Event-Timeline-Generator)
+```powershell
+python SOC-Playbooks\playbook_generator.py
+```
 
-### 3️⃣ Incident Report Generator
-Prompt-based CLI tool to document incidents  
-📁 [`Incident-Report-Generator`](./Incident-Report-Generator)
+## Repository Structure
 
-### 4️⃣ SOC Playbook Generator
-Builds Markdown playbooks for Phishing, Malware, etc.  
-📁 [`SOC-Playbooks`](./SOC-Playbooks)
+```text
+SOC-Toolkit/
+├── Event-Timeline-Generator/
+├── IOC-Lookup/
+├── Incident-Report-Generator/
+├── Log-Watcher/
+├── PDF-Report-Exporter/
+├── SIEM-Log-Feeder/
+├── SOC-Playbooks/
+├── Sample-Investigation/
+├── Threat-Rule-Engine/
+├── main.py
+└── README.md
+```
 
-### 5️⃣ Threat Rule Engine
-Scans logs for matches to detection rules with severity  
-📁 [`Threat-Rule-Engine`](./Threat-Rule-Engine)
+## Safety Notes
 
-### 6️⃣ IOC Lookup Tool
-Flags IOCs using a local threat intel list  
-📁 [`IOC-Lookup`](./IOC-Lookup)
+- Use lab logs and sample indicators only.
+- Do not commit real incident data, customer logs, IP addresses from sensitive environments, or proprietary detection content.
+- Validate generated reports before sharing them externally.
+- Treat tool output as analyst support, not as a replacement for investigation.
 
-### 7️⃣ PDF Report Exporter
-Converts `.txt` reports into printable `.pdf` files  
-📁 [`PDF-Report-Exporter`](./PDF-Report-Exporter)
+## Skills Demonstrated
 
----
+- Python CLI scripting
+- Log parsing and event normalization
+- IOC matching
+- Basic detection-rule design
+- Incident documentation
+- Security playbook writing
+- Report artifact generation
 
-## 🧠 Why This Exists
+## Roadmap
 
-This toolkit was built to:
-- Simulate the day-to-day work of SOC analysts
-- Help learn detection engineering concepts
-- Demonstrate real-world technical workflows in cybersecurity
+- Add a single non-interactive CLI with subcommands.
+- Add unit tests for each parser and rule engine.
+- Add structured JSON output for integration with other tools.
+- Add sample Sigma-style rule conversion.
+- Add README examples for each sub-tool.
 
----
+## Author
 
-## 👨‍💻 Author
-
-**Armando Gomez**  
-GitHub: [ArmandoSNHU](https://github.com/ArmandoSNHU)
-
----
+Armando Gomez  
+GitHub: [@ArmandoSNHU](https://github.com/ArmandoSNHU)
